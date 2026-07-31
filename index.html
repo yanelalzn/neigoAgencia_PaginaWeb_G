@@ -53,6 +53,8 @@
     <main>
         <section class="hero" id="inicio">
             <div class="hero__inner container">
+                <div class="hero__shape hero__shape--lime"></div>
+                <div class="hero__shape hero__shape--violet"></div>
                 <div class="hero__copy reveal">
                     <p class="eyebrow">Agencia creativa · Lima, Perú</p>
 
@@ -101,56 +103,55 @@
                 </div>
             </div>
         </section>
+        <div class="intro-process-wrapper">
+            <img src="img/line_2.png" class="bg-loop-line" alt="" aria-hidden="true">
 
-        <section class="intro section" id="servicios">
-            <div class="container">
-                <div class="intro__heading reveal">
-                    <span class="eyebrow eyebrow--dark">Lo que hacemos</span>
-                    <h2>Todo lo que tu marca necesita para avanzar.</h2>
+            <section class="intro section" id="servicios">
+                <div class="container">
+                    <div class="intro__heading reveal">
+                        <span class="eyebrow eyebrow--dark">Lo que hacemos</span>
+                        <h2>Todo lo que tu marca necesita para avanzar.</h2>
+                    </div>
+
+                    <div class="intro__text reveal">
+                        <p>
+                            Estrategia, creatividad y ejecución en un solo equipo.
+                            Desde la idea inicial hasta la implementación final.
+                        </p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="intro__text reveal">
-                    <p>
-                        Estrategia, creatividad y ejecución en un solo equipo.
-                        Desde la idea inicial hasta la implementación final.
-                    </p>
+            <section class="steps section" id="proceso">
+                <div class="container">
+                    <div class="steps__grid">
+                        <article class="step reveal">
+                            <span>01</span>
+                            <h3>Conecta</h3>
+                            <p>Entendemos tu marca, objetivos, público y oportunidades.</p>
+                        </article>
+
+                        <article class="step reveal">
+                            <span>02</span>
+                            <h3>Activa</h3>
+                            <p>Construimos una estrategia clara y una dirección creativa sólida.</p>
+                        </article>
+
+                        <article class="step reveal">
+                            <span>03</span>
+                            <h3>Diseña</h3>
+                            <p>Convertimos la estrategia en una experiencia visual memorable.</p>
+                        </article>
+
+                        <article class="step reveal">
+                            <span>04</span>
+                            <h3>Impulsa</h3>
+                            <p>Lanzamos, medimos y optimizamos para generar resultados reales.</p>
+                        </article>
+                    </div>
                 </div>
-                <div class="intro__img-wrapper">
-                    <img src="img/circle.png" id="logo-rodante" class="circle-img" alt="Logo">
-                </div>
-            </div>
-        </section>
-
-        <section class="steps section" id="proceso">
-            <div class="container">
-                <div class="steps__grid">
-                    <article class="step reveal">
-                        <span>01</span>
-                        <h3>Conecta</h3>
-                        <p>Entendemos tu marca, objetivos, público y oportunidades.</p>
-                    </article>
-
-                    <article class="step reveal">
-                        <span>02</span>
-                        <h3>Activa</h3>
-                        <p>Construimos una estrategia clara y una dirección creativa sólida.</p>
-                    </article>
-
-                    <article class="step reveal">
-                        <span>03</span>
-                        <h3>Diseña</h3>
-                        <p>Convertimos la estrategia en una experiencia visual memorable.</p>
-                    </article>
-
-                    <article class="step reveal">
-                        <span>04</span>
-                        <h3>Impulsa</h3>
-                        <p>Lanzamos, medimos y optimizamos para generar resultados reales.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
         <!-- STATEMENT / QUOTE BANNER -->
         <section class="statement">
             <div class="statement__bg">
@@ -171,9 +172,9 @@
 
         <section class="audiences section">
             <div class="container">
-                <article class="audience audience--red reveal">
-                    <div class="audience__copy">
-                        <span class="eyebrow">Para marcas</span>
+                <article class="audience audience--lime reveal">
+                    <div class="audience__copy copy_ult">
+                        <span class="eyebrow audience_bl">Para marcas</span>
                         <h2>Ideas que se convierten en <span>experiencias.</span></h2>
                         <p>
                             Branding, campañas y contenido para construir una marca
@@ -198,7 +199,7 @@
                             Páginas web, campañas y sistemas visuales diseñados
                             para informar, convencer y convertir.
                         </p>
-                        <a href="#contacto">
+                        <a href="#contacto" style="border-bottom:2px solid white;">
                             Conoce más
                             <i class="ri-arrow-right-line"></i>
                         </a>
@@ -247,13 +248,15 @@
                 <div class="portfolio__grid reveal">
                     <!-- Card 1 -->
                     <article class="project">
-                        <div class="project__image">
-                            <img src="img/proj_1.png" alt="Plataforma Digital Zanei Studio">
-                        </div>
-                        <div class="project__content">
-                            <span>Diseño Web & UX/UI</span>
-                            <h3>Plataforma Digital Zanei Studio</h3>
-                        </div>
+                        <a href="portafolio/zaneiStudio.html" class="project__link" target="_blank">
+                            <div class="project__image">
+                                <img src="img/proj_1.png" alt="Plataforma Digital Zanei Studio">
+                            </div>
+                            <div class="project__content">
+                                <span>Diseño Web & UX/UI</span>
+                                <h3>Plataforma Digital Zanei Studio</h3>
+                            </div>
+                         </a>
                     </article>
 
                     <!-- Card 2 -->
@@ -371,9 +374,6 @@
                 <span>Diseño y Desarrollo Web por Neigo Agencia.</span>
             </div>
         </div>
-        <section>
-            <img src="img/logo_footer.png" alt="">
-        </section>
     </footer>
 
     <div class="whatsapp-container">
