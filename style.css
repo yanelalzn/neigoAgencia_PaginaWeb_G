@@ -861,7 +861,7 @@ button{font:inherit}
 /* -------------- PROYECTO --------------- */
 
 .project-detail__top{
-   display: flex;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 70px;
@@ -877,8 +877,11 @@ button{font:inherit}
     display: block;
     border-radius: var(--radius-lg);
 }
+.project-detail_tittle{
+    margin-bottom: 30px;
+}
 .project-detail__info{
-    width:280px;
+    width:350px;
     flex-shrink:0;
 }
 .project-detail__title{
@@ -891,6 +894,7 @@ button{font:inherit}
     color:var(--red);
     font-size:.95rem;
     font-weight:600;
+    margin-bottom:30px;
 }
 .project-detail__item{
     margin-bottom:30px;
