@@ -96,3 +96,106 @@ window.addEventListener('scroll', () => {
         // Aplicamos la rotación
         logoRodante.style.transform = `rotate(${grados}deg)`;
     });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const path = document.querySelector('#svg-mono');
+    const container = document.querySelector('.intro-process-wrapper');
+    
+    if (!path || !container) return;
+
+    const pathLength = path.getTotalLength();
+
+    // Inicializa el estado oculto del trazo
+    path.style.strokeDasharray = pathLength;
+    path.style.strokeDashoffset = pathLength;
+
+    function animateOnScroll() {
+        const rect = container.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Porcentaje base de scroll
+        const totalDistance = rect.height + windowHeight;
+        const currentProgress = (windowHeight - rect.top) / totalDistance;
+
+        // ⚡ MULTIPLICADOR DE VELOCIDAD:
+        // Multiplicamos por 1.8 (o 2.0) para que se complete antes de que la sección salga de pantalla
+        const speedMultiplier = 1.8; 
+        const scrollPercentage = Math.min(Math.max(currentProgress * speedMultiplier, 0), 1);
+
+        // Dibuja la línea dinámicamente
+        const drawLength = pathLength * scrollPercentage;
+        path.style.strokeDashoffset = pathLength - drawLength;
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll();
+});
+
+// Efecto de escritura para múltiples bloques de texto
+
+function crearEfectoEscritura(elementId, listaPalabras) {
+    const elementoTexto = document.getElementById(elementId);
+    if (!elementoTexto) return;
+
+    let palabraIndex = 0;
+    let charIndex = 0;
+    let estaBorrando = false;
+
+    const VELOCIDAD_ESCRIBIR = 100;
+    const VELOCIDAD_BORRAR = 50;
+    const TIEMPO_ESPERA = 2000;
+
+    function animar() {
+        const palabraActual = listaPalabras[palabraIndex];
+
+        if (estaBorrando) {
+            elementoTexto.textContent = palabraActual.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            elementoTexto.textContent = palabraActual.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let tiempoSiguiente = estaBorrando ? VELOCIDAD_BORRAR : VELOCIDAD_ESCRIBIR;
+
+        if (!estaBorrando && charIndex === palabraActual.length) {
+            tiempoSiguiente = TIEMPO_ESPERA;
+            estaBorrando = true;
+        } else if (estaBorrando && charIndex === 0) {
+            estaBorrando = false;
+            palabraIndex = (palabraIndex + 1) % listaPalabras.length;
+            tiempoSiguiente = 400;
+        }
+
+        setTimeout(animar, tiempoSiguiente);
+    }
+
+    animar();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Bloque 1: Para marcas
+    crearEfectoEscritura("typed-experiencias", [
+        "experiencias.",
+        "resultados.",
+        "ventas.",
+        "conexiones."
+    ]);
+
+    // Bloque 2: Para empresas
+    crearEfectoEscritura("typed-trabajan", [
+        "trabajan",
+        "venden",
+        "crecen",
+        "destacan"
+    ]);
+
+    // Bloque 3: Para proyectos
+    crearEfectoEscritura("typed-realidad", [
+        "realidad.",
+        "impacto.",
+        "ejecución.",
+        "físico."
+    ]);
+});

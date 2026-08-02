@@ -140,7 +140,6 @@ button{font:inherit}
     display: inline-block;
     background-color: #000000;
     color: #ffffff;
-    padding: 2px 12px;
     line-height: 1.1;
     border-radius: 4px;
 }
@@ -313,17 +312,27 @@ button{font:inherit}
     overflow: hidden;
     width: 100%;
 }
-.bg-loop-line {
+.intro-process-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.bg-loop-svg {
     position: absolute;
-    top: 40%;
-    left: 57%;
-    transform: translate(-50%, -50%);
-    width: 110%;
-    max-width: 110%;
-    height: auto;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.8;
+    top: -15%;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+    overflow: visible; /* Asegura que no corte lo que sobresalga */
+}
+#svg-mono {
+    transition: stroke-dashoffset 0.1s linear;
+}
+.intro-process-wrapper .intro,
+.intro-process-wrapper .steps {
+    position: relative;
+    z-index: 2;
 }
 .bg-loop-line_sub {
     position: absolute;
@@ -518,7 +527,17 @@ button{font:inherit}
     transition:.5s ease;
 }
 .audience:hover .audience__image img{transform:scale(1.04)}
+.typed-cursor {
+    display: inline-block;
+    font-weight: 300;
+    opacity: 1;
+    animation: blinkCursor 0.8s infinite;
+}
 
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
 .portfolio__head{
     display:grid;
     grid-template-columns:1.1fr .9fr;

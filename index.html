@@ -36,7 +36,6 @@
             </button>
 
             <nav class="nav" id="nav">
-                <a href="index.html#inicio" class="active">Inicio</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#proceso">Proceso</a>
                 <a href="#portafolio">Portafolio</a>
@@ -104,8 +103,32 @@
             </div>
         </section>
         <div class="intro-process-wrapper">
-            <img src="img/line_2.png" class="bg-loop-line" alt="" aria-hidden="true">
+            <svg class="bg-loop-svg"
+                viewBox="0 -250 1700 1150"
+                preserveAspectRatio="none"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
 
+                <path
+                    id="svg-mono"
+                    d="
+                    M 80 -150
+                    C -60 -50 -80 470 180 590
+                    C 360 700 720 630 900 500
+                    C 960 455 995 395 995 335
+                    C 995 250 940 210 880 230
+                    C 820 250 800 340 830 420
+                    C 865 505 965 560 1140 565
+                    C 1320 570 1455 575 1535 625
+                    C 1615 675 1640 760 1660 840
+                    C 1680 920 1755 905 1790 760
+                    "
+                    fill="none"
+                    stroke="#E5E5E2"
+                    stroke-width="16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
             <section class="intro section" id="servicios">
                 <div class="container">
                     <div class="intro__heading reveal">
@@ -152,30 +175,17 @@
                 </div>
             </section>
         </div>
-        <!-- STATEMENT / QUOTE BANNER -->
-        <section class="statement">
-            <div class="statement__bg">
-                <div class="container statement__container">
-                    <div class="statement__content">
-                    <blockquote class="statement__quote">
-                        "No diseñamos por tendencia.<br>Diseñamos con intención."
-                    </blockquote>
-                    <p class="statement__subtext">Nada es casual.</p>
-                    </div>
-                </div>
-                <!-- Logo flotante -->
-                <div class="statement__logo-wrapper">
-                    <img src="img/elemento_circular.png" alt="Logo Neigo Circular" class="statement__logo-img js-rotate-logo">
-                </div>
-            </div>
-        </section>
-
         <section class="audiences section">
             <div class="container">
                 <article class="audience audience--lime reveal">
                     <div class="audience__copy copy_ult">
                         <span class="eyebrow audience_bl">Para marcas</span>
-                        <h2>Ideas que se convierten en <span>experiencias.</span></h2>
+                        <h2>
+                            Ideas que se convierten en <br>
+                            <span class="badge-dinamico">
+                                <span id="typed-experiencias"></span><span class="typed-cursor">|</span>
+                            </span>
+                        </h2>
                         <p>
                             Branding, campañas y contenido para construir una marca
                             reconocible, cercana y consistente.
@@ -190,11 +200,16 @@
                         <img src="img/serv_1.png" alt="Proyecto de branding">
                     </div>
                 </article>
-
                 <article class="audience audience--black reveal">
                     <div class="audience__copy">
                         <span class="eyebrow">Para empresas</span>
-                        <h2>Experiencias digitales que <span class="highlight-white">trabajan</span> por ti.</h2>
+                        <h2>
+                            Experiencias digitales que <br>
+                            <span class="highlight-white">
+                                <span id="typed-trabajan"></span><span class="typed-cursor">|</span>
+                            </span> <br>
+                            por ti.
+                        </h2>
                         <p>
                             Páginas web, campañas y sistemas visuales diseñados
                             para informar, convencer y convertir.
@@ -209,11 +224,15 @@
                         <img src="img/serv_2.png">
                     </div>
                 </article>
-
                 <article class="audience audience--white reveal">
                     <div class="audience__copy copy_ult">
                         <span class="eyebrow audience_bl">Para proyectos</span>
-                        <h2>Del concepto a la <span>realidad.</span></h2>
+                        <h2>
+                            Del concepto a la 
+                            <span class="badge-dinamico">
+                                <span id="typed-realidad"></span><span class="typed-cursor">|</span>
+                            </span>
+                        </h2>
                         <p>
                             BTL, trade, outdoor e implementaciones para llevar
                             tu propuesta al espacio físico.
